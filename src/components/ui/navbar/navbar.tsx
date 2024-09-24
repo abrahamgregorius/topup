@@ -9,13 +9,13 @@ import { Button } from "../button";
 import Sidebar from "./sidebar";
 
 const Navbar = () => {
-  const [showSidebar, setShowSidebar] = useState(true);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   return (
     <>
       {/* INI SEMENTARA JUGA, KLO MAU PAKE TRANSITION PROSES DI SIDEBAR COMPONENTNYA AJA */}
       {showSidebar && <Sidebar setShowSidebar={setShowSidebar} />}
-      <div className="flex items-center justify-between h-[80px] px-[80px] border-b border-[#202328]">
+      <div className="flex items-center justify-between h-[80px] px-20 border-b border-[#202328]">
         <div className="flex items-center gap-4 cursor-pointer">
           {/* INI ICON MENU SEMENTARA */}
           <MenuIcon onClick={() => setShowSidebar(true)} />
