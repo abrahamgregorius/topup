@@ -103,7 +103,7 @@ const Register = () => {
                                         className={`h-5 w-5 rounded border-[#D0FD00]`}
                                     ></Checkbox>
                                     <label htmlFor="remember-me" className="text-sm">
-                                        Saya setuju dengan <Link className="text-[#D0FD00]">Syarat dan Ketentuan</Link> dan <Link className="text-[#D0FD00]">Kebijakan Pribadi</Link>
+                                        Saya setuju dengan <Link to="#" className="text-[#D0FD00]">Syarat dan Ketentuan</Link> dan <Link to="#" className="text-[#D0FD00]">Kebijakan Pribadi</Link>
                                     </label>
                                 </div>
                             </div>
