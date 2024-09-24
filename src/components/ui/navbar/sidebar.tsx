@@ -2,8 +2,8 @@
 
 import { HomeIcon, MenuIcon } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-
 import { routes } from "@/App";
+import logoIcon from "@/assets/Logo.svg";
 
 interface SidebarProps {
   showSidebar: boolean;
@@ -26,7 +26,7 @@ const Sidebar = ({ setShowSidebar, showSidebar }: SidebarProps) => {
         }`}>
         <div className="flex items-center justify-between cursor-pointer">
           <Link to="/" className="font-bold text-[20px]">
-            awikwok
+            <img src={logoIcon} alt="" />
           </Link>
           <MenuIcon onClick={() => setShowSidebar(false)} />
         </div>

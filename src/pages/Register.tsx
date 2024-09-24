@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 import documentIcon from "@/assets/Iconly/Curved/Bold/Document.svg";
 import thumbnail from "@/assets/thumbnail.svg";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "@/components/partials/button";
+import { Checkbox } from "@/components/partials/checkbox";
 
 const Register = () => {
   return (
