@@ -51,6 +51,44 @@ const Home = () => {
     },
   ];
 
+  const vouchers = [
+    {
+      name: "Google Play",
+      company: "Playstore",
+      // logo: "https://freelogopng.com/images/all_img/1664302216valorant-logo-png.png",
+      background:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb5LOPUgzjbz_m4aVulC-GU5zu-30HBdYnAg&s",
+    },
+    {
+      name: "Google Play",
+      company: "Playstore",
+      // logo: "https://freelogopng.com/images/all_img/1664302216valorant-logo-png.png",
+      background:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb5LOPUgzjbz_m4aVulC-GU5zu-30HBdYnAg&s",
+    },
+    {
+      name: "Google Play",
+      company: "Playstore",
+      // logo: "https://freelogopng.com/images/all_img/1664302216valorant-logo-png.png",
+      background:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb5LOPUgzjbz_m4aVulC-GU5zu-30HBdYnAg&s",
+    },
+    {
+      name: "Google Play",
+      company: "Playstore",
+      // logo: "https://freelogopng.com/images/all_img/1664302216valorant-logo-png.png",
+      background:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb5LOPUgzjbz_m4aVulC-GU5zu-30HBdYnAg&s",
+    },
+    {
+      name: "Google Play",
+      company: "Playstore",
+      // logo: "https://freelogopng.com/images/all_img/1664302216valorant-logo-png.png",
+      background:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRb5LOPUgzjbz_m4aVulC-GU5zu-30HBdYnAg&s",
+    },
+  ];
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -59,9 +97,28 @@ const Home = () => {
           <p className="uppercase text-[#D0FD00] text-base">Top up Game</p>
           <h4 className="mt-2 font-bold text-4xl">Game Populer</h4>
         </div>
-        <div className="mt-8 flex flex-wrap gap-7">
+        <div className="mt-8 flex flex-wrap gap-6">
           {games.map((game) => (
             <VerticalCard data={game} />
+          ))}
+        </div>
+        <div className="mt-10">
+          <h4 className="text-[1.75rem]">Game Lainnya</h4>
+          <div className="mt-8 flex flex-wrap gap-6">
+            {games.map((game) => (
+              <VerticalCard data={game} />
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="popular-games px-20">
+        <div className="mt-14">
+          <p className="uppercase text-[#D0FD00] text-base">Top up Voucher</p>
+          <h4 className="mt-2 font-bold text-4xl">Voucher Game</h4>
+        </div>
+        <div className="mt-8 flex flex-wrap gap-6">
+          {vouchers.map((voucher) => (
+            <VerticalCard data={voucher} isGame={false} />
           ))}
         </div>
       </div>

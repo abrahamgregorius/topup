@@ -2,7 +2,7 @@
 
 import { ArrowRight } from "lucide-react";
 
-const VerticalCard = ({ data }) => {
+const VerticalCard = ({ data, isGame = true }) => {
   return (
     <div className="group rounded-[24px] h-[240px] w-[190px] overflow-hidden relative">
       {/* Background Image */}
@@ -12,11 +12,13 @@ const VerticalCard = ({ data }) => {
         alt="background"
       />
       {/* Logo Image */}
-      <img
-        className="max-w-[80%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-50 group-hover:opacity-0"
-        src={data.logo}
-        alt="logo"
-      />
+      {isGame && (
+        <img
+          className="max-w-[80%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300 opacity-50 group-hover:opacity-0"
+          src={data.logo}
+          alt="logo"
+        />
+      )}
       {/* Bottom content */}
       <div className="flex flex-col justify-between absolute bottom-0 h-1/2 left-0 w-full p-3 transition-transform duration-300 transform translate-x-[-100%] group-hover:translate-x-0">
         <div>
