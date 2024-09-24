@@ -38,6 +38,7 @@ const Sidebar = ({ setShowSidebar, showSidebar }: SidebarProps) => {
             .map((route) => (
               <Link
                 // 12% of D0FD00 is 191E00
+                onClick={() => setShowSidebar(false)}
                 to={route.path}
                 className={`flex gap-2 font-semibold py-3 px-4 rounded-full ${
                   location.pathname === route.path
