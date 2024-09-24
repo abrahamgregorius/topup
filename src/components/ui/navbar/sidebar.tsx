@@ -6,18 +6,24 @@ import { Link, useLocation } from "react-router-dom";
 import { routes } from "@/App";
 
 interface SidebarProps {
+  showSidebar: boolean;
   setShowSidebar: (value: boolean) => void;
 }
 
-const Sidebar = ({ setShowSidebar }: SidebarProps) => {
+const Sidebar = ({ setShowSidebar, showSidebar }: SidebarProps) => {
   const location = useLocation();
 
   return (
     <>
       <div
         onClick={() => setShowSidebar(false)}
-        className="bg-[#0C0D0D] fixed w-full h-full top-0 left-0 opacity-60"></div>
-      <div className="z-20 fixed p-7 h-screen w-[300px] top-0 left-0 bg-[#0C0D0D] border-r border-[#202328]">
+        className={`z-10 bg-[#0C0D0D] fixed w-full h-full top-0 left-0 transition ${
+          showSidebar ? "opacity-60" : "opacity-0 pointer-events-none"
+        }`}></div>
+      <div
+        className={`z-20 fixed p-7 h-screen w-[300px] top-0 left-0 bg-[#0C0D0D] border-r border-[#202328] transition ${
+          showSidebar ? "translate-x-0" : "-translate-x-full"
+        }`}>
         <div className="flex items-center justify-between cursor-pointer">
           <Link to="/" className="font-bold text-[20px]">
             awikwok

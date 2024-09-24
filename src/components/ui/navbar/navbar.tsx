@@ -13,8 +13,7 @@ const Navbar = () => {
 
   return (
     <>
-      {/* INI SEMENTARA JUGA, KLO MAU PAKE TRANSITION PROSES DI SIDEBAR COMPONENTNYA AJA */}
-      {showSidebar && <Sidebar setShowSidebar={setShowSidebar} />}
+      <Sidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
       <div className="flex items-center justify-between h-[80px] px-20 border-b border-[#202328]">
         <div className="flex items-center gap-4 cursor-pointer">
           {/* INI ICON MENU SEMENTARA */}
