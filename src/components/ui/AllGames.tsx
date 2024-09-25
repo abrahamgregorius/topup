@@ -136,7 +136,9 @@ const AllGames = () => {
               onClick={() => setSelectedChip(chip)}
               id={idx.toString()}
               className={`h-[42px] px-6 rounded-full ${
-                selectedChip.id === chip.id ? "text-[#D0FD00] bg-[#191E00]" : ""
+                selectedChip.id === chip.id
+                  ? "text-[#D0FD00] bg-[#191E00] font-semibold"
+                  : ""
               }`}>
               {chip.text}
             </Button>
