@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Products from "./pages/Products";
 
 export const routes = [
   {
@@ -34,7 +35,7 @@ export const routes = [
   {
     path: "/products",
     title: "Semua Produk",
-    element: <Home></Home>,
+    element: <Products></Products>,
   },
   {
     path: "/contact",
