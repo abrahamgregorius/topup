@@ -1,8 +1,8 @@
 /** @format */
 
 import Footer from "@/components/partials/footer";
+import Navbar from "@/components/partials/navbar/navbar";
 import AllGames from "@/components/ui/AllGames";
-import Navbar from "@/components/ui/navbar/navbar";
 
 const Products = () => {
   return (

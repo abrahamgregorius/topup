@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import MyAccount from "./pages/MyAccount";
+import MyAccount from "./pages/MyAccount/MyAccount";
 import Products from "./pages/Products";
 
 export const authRoutes = [
@@ -52,6 +52,26 @@ export const myAccountRoutes = [
   {
     path: "/my-account",
     title: "My Account",
+    element: <MyAccount></MyAccount>,
+  },
+  {
+    path: "/my-account/profile-settings",
+    title: "Pengaturan Profil",
+    element: <MyAccount></MyAccount>,
+  },
+  {
+    path: "/deposit",
+    title: "Pengaturan Profil",
+    element: <MyAccount></MyAccount>,
+  },
+  {
+    path: "/help",
+    title: "Bantuan",
+    element: <MyAccount></MyAccount>,
+  },
+  {
+    path: "/activity",
+    title: "Aktivitas Akun",
     element: <MyAccount></MyAccount>,
   },
 ];

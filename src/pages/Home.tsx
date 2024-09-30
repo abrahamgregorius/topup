@@ -1,7 +1,7 @@
 /** @format */
 
 import Footer from "@/components/partials/footer";
-import Navbar from "@/components/ui/navbar/navbar";
+import Navbar from "@/components/partials/navbar/navbar";
 import VerticalCard from "@/components/ui/VerticalCard";
 
 const Home = () => {

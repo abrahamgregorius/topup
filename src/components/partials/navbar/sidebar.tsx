@@ -37,9 +37,9 @@ const Sidebar = ({ setShowSidebar, showSidebar }: SidebarProps) => {
               // 12% of D0FD00 is 191E00
               onClick={() => setShowSidebar(false)}
               to={route.path}
-              className={`flex gap-2 font-semibold py-3 px-4 rounded-full ${
+              className={`flex gap-2 py-3 px-4 rounded-full ${
                 location.pathname === route.path
-                  ? "bg-[#191E00] text-[#D0FD00]"
+                  ? "bg-[#191E00] text-[#D0FD00] font-semibold"
                   : ""
               }`}>
               {/* Ini buat iconnya set dari routes harusnya */}
