@@ -1,12 +1,7 @@
 /** @format */
 
-<<<<<<< HEAD
 import Footer from "@/components/partials/footer";
 import Navbar from "@/components/partials/navbar/navbar";
-=======
-import Footer from "@/components/ui/Footer";
-import Navbar from "@/components/ui/navbar/navbar";
->>>>>>> b4dc2a5 (feat: components, responsive page)
 import VerticalCard from "@/components/ui/VerticalCard";
 
 const Home = () => {
@@ -130,7 +125,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
       <div className="popular-games px-20">
         <div className="mt-14">
           <p className="uppercase text-[#D0FD00] text-base">Top up Voucher</p>
@@ -143,11 +137,7 @@ const Home = () => {
         </div>
       </div>
       <Footer />
-    </div>
-=======
-      <Footer></Footer>
     </>
->>>>>>> b4dc2a5 (feat: components, responsive page)
   );
 };
 
