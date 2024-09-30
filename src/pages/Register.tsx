@@ -13,7 +13,7 @@ const Register = () => {
       {/* Login left */}
       <div className="login-left flex justify-center flex-col items-center">
         {/* Login left container */}
-        <div className="container w-full max-w-[500px] flex flex-col gap-10">
+        <div className="container w-full py-12 max-w-[500px] flex flex-col gap-10">
           {/* Login left head */}
           <div className="left-head flex flex-col gap-2">
             <span className="lh-head flex flex-row gap-2">
@@ -125,7 +125,7 @@ const Register = () => {
             <div className="flex justify-center mt-5">
               <span>
                 Sudah punya akun Top Up?{" "}
-                <Link to="/" className="text-[#D0FD00] font-semibold text-sm">
+                <Link to="/login" className="text-[#D0FD00] font-semibold text-sm">
                   Login disini
                 </Link>
               </span>

@@ -6,17 +6,22 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import MyAccount from "./pages/MyAccount/MyAccount";
 import Products from "./pages/Products";
+import Register from "./pages/Register";
+import Contact from "./pages/Contact";
+import History from "./pages/History";
 
 export const authRoutes = [
   {
     path: "/login",
     title: "Masuk",
     element: <Login></Login>,
+    icon: "",
   },
   {
     path: "/register",
     title: "Daftar",
-    element: <Login></Login>,
+    element: <Register></Register>,
+    icon: "",
   },
 ];
 
@@ -25,26 +30,31 @@ export const sidebarRoutes = [
     path: "/",
     title: "Beranda",
     element: <Home></Home>,
+    icon: "",
   },
   {
     path: "/history",
     title: "Riwayat Pemesanan",
-    element: <Home></Home>,
+    element: <History></History>,
+    icon: "",
   },
   {
     path: "/pricelist",
     title: "Daftar Harga",
     element: <Home></Home>,
+    icon: "",
   },
   {
     path: "/products",
     title: "Semua Produk",
     element: <Products></Products>,
+    icon: "",
   },
   {
     path: "/contact",
     title: "Hubungi Kami",
-    element: <Home></Home>,
+    element: <Contact></Contact>,
+    icon: "",
   },
 ];
 

@@ -1,7 +1,12 @@
 /** @format */
 
+<<<<<<< HEAD
 import Footer from "@/components/partials/footer";
 import Navbar from "@/components/partials/navbar/navbar";
+=======
+import Footer from "@/components/ui/Footer";
+import Navbar from "@/components/ui/navbar/navbar";
+>>>>>>> b4dc2a5 (feat: components, responsive page)
 import VerticalCard from "@/components/ui/VerticalCard";
 
 const Home = () => {
@@ -91,27 +96,41 @@ const Home = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <>
       <Navbar />
-      <div className="popular-games px-20">
-        <div className="mt-14">
-          <p className="uppercase text-[#D0FD00] text-base">Top up Game</p>
-          <h4 className="mt-2 font-bold text-4xl">Game Populer</h4>
-        </div>
-        <div className="mt-8 flex flex-wrap gap-6">
-          {games.map((game) => (
-            <VerticalCard data={game} />
-          ))}
-        </div>
-        <div className="mt-10">
-          <h4 className="text-[1.75rem]">Game Lainnya</h4>
+      <div className="w-full max-w-[1450px] mx-auto my-0">
+        <div className="popular-games px-20 ">
+          <div className="mt-14">
+            <p className="uppercase text-[#D0FD00] text-base">Top up Game</p>
+            <h4 className="mt-2 font-bold text-4xl">Game Populer</h4>
+          </div>
           <div className="mt-8 flex flex-wrap gap-6">
             {games.map((game) => (
               <VerticalCard data={game} />
             ))}
           </div>
+          <div className="mt-10">
+            <h4 className="text-[1.75rem]">Game Lainnya</h4>
+            <div className="mt-8 flex flex-wrap gap-6">
+              {games.map((game) => (
+                <VerticalCard data={game} />
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="popular-games px-20">
+          <div className="mt-14">
+            <p className="uppercase text-[#D0FD00] text-base">Top up Voucher</p>
+            <h4 className="mt-2 font-bold text-4xl">Voucher Game</h4>
+          </div>
+          <div className="mt-8 flex flex-wrap gap-6">
+            {vouchers.map((voucher) => (
+              <VerticalCard data={voucher} isGame={false} />
+            ))}
+          </div>
         </div>
       </div>
+<<<<<<< HEAD
       <div className="popular-games px-20">
         <div className="mt-14">
           <p className="uppercase text-[#D0FD00] text-base">Top up Voucher</p>
@@ -125,6 +144,10 @@ const Home = () => {
       </div>
       <Footer />
     </div>
+=======
+      <Footer></Footer>
+    </>
+>>>>>>> b4dc2a5 (feat: components, responsive page)
   );
 };
 
