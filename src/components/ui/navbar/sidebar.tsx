@@ -2,7 +2,8 @@
 
 import { HomeIcon, MenuIcon } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { routes } from "@/App";
+
+import { sidebarRoutes } from "@/App";
 import logoIcon from "@/assets/Logo.svg";
 
 interface SidebarProps {
@@ -31,25 +32,21 @@ const Sidebar = ({ setShowSidebar, showSidebar }: SidebarProps) => {
           <MenuIcon onClick={() => setShowSidebar(false)} />
         </div>
         <div className="mt-[50px] flex flex-col gap-1">
-          {routes
-            .filter(
-              (route) => route.path !== "/login" && route.path !== "/register"
-            )
-            .map((route) => (
-              <Link
-                // 12% of D0FD00 is 191E00
-                onClick={() => setShowSidebar(false)}
-                to={route.path}
-                className={`flex gap-2 font-semibold py-3 px-4 rounded-full ${
-                  location.pathname === route.path
-                    ? "bg-[#191E00] text-[#D0FD00]"
-                    : ""
-                }`}>
-                {/* Ini buat iconnya set dari routes harusnya */}
-                <HomeIcon />
-                {route.title}
-              </Link>
-            ))}
+          {sidebarRoutes.map((route) => (
+            <Link
+              // 12% of D0FD00 is 191E00
+              onClick={() => setShowSidebar(false)}
+              to={route.path}
+              className={`flex gap-2 font-semibold py-3 px-4 rounded-full ${
+                location.pathname === route.path
+                  ? "bg-[#191E00] text-[#D0FD00]"
+                  : ""
+              }`}>
+              {/* Ini buat iconnya set dari routes harusnya */}
+              <HomeIcon />
+              {route.title}
+            </Link>
+          ))}
         </div>
       </div>
     </>

@@ -4,9 +4,10 @@ import { Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import MyAccount from "./pages/MyAccount";
 import Products from "./pages/Products";
 
-export const routes = [
+export const authRoutes = [
   {
     path: "/login",
     title: "Masuk",
@@ -17,6 +18,9 @@ export const routes = [
     title: "Daftar",
     element: <Login></Login>,
   },
+];
+
+export const sidebarRoutes = [
   {
     path: "/",
     title: "Beranda",
@@ -44,11 +48,21 @@ export const routes = [
   },
 ];
 
+export const myAccountRoutes = [
+  {
+    path: "/my-account",
+    title: "My Account",
+    element: <MyAccount></MyAccount>,
+  },
+];
+
+export const allRoutes = [...authRoutes, ...sidebarRoutes, ...myAccountRoutes];
+
 export default function App() {
   return (
     <>
       <Routes>
-        {routes.map((route, id) => (
+        {allRoutes.map((route, id) => (
           <Route
             id={id.toString()}
             path={route.path}

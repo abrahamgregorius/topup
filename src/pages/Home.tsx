@@ -1,5 +1,6 @@
 /** @format */
 
+import Footer from "@/components/partials/footer";
 import Navbar from "@/components/ui/navbar/navbar";
 import VerticalCard from "@/components/ui/VerticalCard";
 
@@ -16,7 +17,7 @@ const Home = () => {
     },
     {
       name: "Mobile Legends",
-      company: "Moontod",
+      company: "Moontoon",
       logo: "https://buatlogoonline.com/wp-content/uploads/2022/10/Logo-Mobile-Legends-PNG.png",
       background:
         "https://yt3.googleusercontent.com/KV6U9V0H9cn4nGQ1M4BgYtv0So7Cyuz3PLdE6js7kc5FsoUrL-tnUdsVEYyDX6Itjb5CZnOq-g=s900-c-k-c0x00ffffff-no-rj",
@@ -122,6 +123,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
