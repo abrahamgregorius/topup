@@ -5,7 +5,7 @@ const History = () => {
     <>
         <Main>
             <div className="flex flex-col sm:flex-row ">
-                <div className="w-full ">
+                <div className="w-full">
 
                 </div>
                 <div className="w-full">
