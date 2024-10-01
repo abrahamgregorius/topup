@@ -8,7 +8,7 @@ interface propsType {
 const Container = (props: propsType) => {
   return (
         <>
-            <div className={`w-full max-w-[1450px] py-8 mx-auto my-0 ${props.className}`}>
+            <div className={`w-full max-w-[1450px] p-8 mx-auto my-0 ${props.className}`}>
                 {props?.children}
             </div>
         </>

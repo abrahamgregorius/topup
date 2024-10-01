@@ -23,7 +23,7 @@ const Navbar = () => {
             <img src={logoIcon} alt="" />
           </Link>
         </div>
-        <div className="form-control hidden sm:flex items-center gap-2 max-w-[600px] h-[48px] px-5 rounded-full bg-[#1D1F21]">
+        <div className="form-control hidden sm:flex items-center gap-2 w-[650px] h-[48px] px-5 rounded-full bg-[#1D1F21]">
           <SearchIcon />
           <input
             type="text"
