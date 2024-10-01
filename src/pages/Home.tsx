@@ -125,17 +125,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="popular-games px-20">
-        <div className="mt-14">
-          <p className="uppercase text-[#D0FD00] text-base">Top up Voucher</p>
-          <h4 className="mt-2 font-bold text-4xl">Voucher Game</h4>
-        </div>
-        <div className="mt-8 flex flex-wrap gap-6">
-          {vouchers.map((voucher) => (
-            <VerticalCard data={voucher} isGame={false} />
-          ))}
-        </div>
-      </div>
       <Footer />
     </>
   );

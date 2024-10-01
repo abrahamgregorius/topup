@@ -1,20 +1,17 @@
 import React from 'react'
-import Navbar from './navbar/navbar'
+import Navbar from '@/components/partials/navbar/navbar'
 import Footer from './Footer'
 import Container from './Container'
 
 interface propsType {
     children?: React.ReactNode
-
 }
 
 const Main = (props: propsType) => {
   return (
         <>
             <Navbar></Navbar>
-                <Container>
-                    {props.children}
-                </Container>
+                {props.children}
             <Footer></Footer>
         </>
     )

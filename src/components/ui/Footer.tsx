@@ -5,6 +5,7 @@ import logoIcon from "@/assets/Logo.svg";
 
 const Footer = () => {
     return (
+        <>
         <footer className="p-20 mt-20 border-t border-[#202328]">
             <div className="w-full max-w-[1450px] mx-auto flex items-center justify-between">
                 <div className="flex flex-col sm:flex-row items-center justify-between mx-auto">
@@ -67,6 +68,14 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
+        <div className="py-5 bg-[#4F120]">
+            <p className="text-center text-sm">
+            Copyright © 2021 by mystore&nbsp;-&nbsp;
+            <span className="text-[#D0FD00]">Terms and conditions</span>
+            &nbsp;-&nbsp;<span className="text-[#D0FD00]">Privacy Policy</span>
+            </p>
+        </div>
+        </>
     );
 };
 

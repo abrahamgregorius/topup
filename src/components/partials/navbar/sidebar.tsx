@@ -14,7 +14,6 @@ interface SidebarProps {
 const Sidebar = ({ setShowSidebar, showSidebar }: SidebarProps) => {
     const location = useLocation();
 
-<<<<<<< HEAD:src/components/partials/navbar/sidebar.tsx
   return (
     <>
       <div
@@ -52,53 +51,6 @@ const Sidebar = ({ setShowSidebar, showSidebar }: SidebarProps) => {
       </div>
     </>
   );
-=======
-    return (
-        <>
-            <div
-                onClick={() => setShowSidebar(false)}
-                className={`z-10 bg-[#0C0D0D] fixed w-full h-full top-0 left-0 transition ${
-                    showSidebar ? "opacity-60" : "opacity-0 pointer-events-none"
-                }`}
-            ></div>
-            <div
-                className={`z-20 fixed p-7 h-screen w-[300px] top-0 left-0 bg-[#0C0D0D] border-r border-[#202328] transition ${
-                    showSidebar ? "translate-x-0" : "-translate-x-full"
-                }`}
-            >
-                <div className="flex items-center justify-between cursor-pointer">
-                    <Link to="/" className="font-bold text-[20px]">
-                        <img src={logoIcon} alt="" />
-                    </Link>
-                    <MenuIcon onClick={() => setShowSidebar(false)} />
-                </div>
-                <div className="mt-[50px] flex flex-col gap-1">
-                    {routes
-                        .filter(
-                            (route) =>
-                                route.path !== "/login" &&
-                                route.path !== "/register"
-                        )
-                        .map((route) => (
-                            <Link
-                                // 12% of D0FD00 is 191E00
-                                onClick={() => setShowSidebar(false)}
-                                to={route.path}
-                                className={`flex gap-2 font-semibold py-3 px-4 rounded-full ${
-                                    location.pathname === route.path
-                                        ? "bg-[#191E00] text-[#D0FD00]"
-                                        : ""
-                                }`}
-                            >
-                                <HomeIcon />
-                                {route.title}
-                            </Link>
-                        ))}
-                </div>
-            </div>
-        </>
-    );
->>>>>>> b4dc2a5 (feat: components, responsive page):src/components/ui/navbar/sidebar.tsx
 };
 
 export default Sidebar;

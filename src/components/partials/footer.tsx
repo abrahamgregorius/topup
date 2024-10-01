@@ -70,7 +70,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer className="flex gap-8 px-20 py-10 border-t border-[#202328]">
+      <footer className="flex gap-8 px-20 py-10 mt-14 border-t border-[#202328]">
         <div className="w-[626px] max-w-full flex flex-col gap-8 items-start ">
           <img className="h-[52px]" src={logoIcon} alt="logo" />
           <p>
@@ -99,7 +99,7 @@ const Footer = () => {
           </div>
         ))}
       </footer>
-      <div className="py-5 bg-[#4F120]">
+      <div className="pb-5 bg-[#4F120]">
         <p className="text-center text-sm">
           Copyright © 2021 by mystore&nbsp;-&nbsp;
           <span className="text-[#D0FD00]">Terms and conditions</span>
