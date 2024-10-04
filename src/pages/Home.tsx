@@ -2,7 +2,7 @@
 
 import Footer from "@/components/partials/footer";
 import Navbar from "@/components/partials/navbar/navbar";
-import VerticalCard from "@/components/ui/VerticalCard";
+import VerticalCard from "@/components/partials/VerticalCard";
 
 const Home = () => {
   // https://www.postershoppe.com/cdn/shop/files/valorant_black_framed_1200x1200.jpg?v=1685664393

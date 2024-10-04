@@ -4,6 +4,7 @@ import { HomeIcon } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import { PersonIcon } from "@radix-ui/react-icons";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
 
 const settingsRoutes = [
   {
@@ -54,21 +55,27 @@ const settingsRoutes = [
 ];
 
 const SidebarSettings = () => {
-  // INI BELUM SELESAI, ILL DO IT LATER
   return (
-    <div className="px-7 py-8 w-[280px]">
+    <div className="px-7 py-8 w-1/4">
       {settingsRoutes.map((route) => {
         if (route.isGroup)
           return (
-            // <Accordion type="single" collapsible>
-            //   <AccordionItem value="item-1">
-            //     <AccordionTrigger>Is it accessible?</AccordionTrigger>
-            //     <AccordionContent>
-            //       Yes. It adheres to the WAI-ARIA design pattern.
-            //     </AccordionContent>
-            //   </AccordionItem>
-            // </Accordion>
-            <div>asd</div>
+            <>
+            <Accordion type="single" collapsible>
+              <AccordionItem value="item-1">
+                <AccordionTrigger>{route.title}</AccordionTrigger>
+                  {route.paths?.map((path) => {
+                    return (
+                      <>
+                        <AccordionContent>
+                          {path.name}
+                        </AccordionContent>
+                      </>
+                    )
+                  })}
+              </AccordionItem>
+            </Accordion>
+            </>
           );
         return (
           <div>
@@ -79,8 +86,6 @@ const SidebarSettings = () => {
                   ? "bg-[#191E00] text-[#D0FD00] font-semibold"
                   : ""
               }`}>
-              {/* Ini harusnya jadi HomeIcon */}
-              {/* <img src={route.icon} alt="" /> */}
               <HomeIcon />
               {route.title}
             </Link>

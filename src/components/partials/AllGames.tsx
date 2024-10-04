@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { SearchIcon } from "lucide-react";
 
-import { Button } from "../partials/button";
+import { Button } from "../ui/button";
 import VerticalCard from "./VerticalCard";
 
 const games = [

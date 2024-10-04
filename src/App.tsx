@@ -9,6 +9,8 @@ import Products from "./pages/Products";
 import Register from "./pages/Register";
 import Contact from "./pages/Contact";
 import History from "./pages/History";
+import PriceList from "./pages/PriceList";
+import AccountSettings from "./pages/MyAccount/AccountSettings";
 
 export const authRoutes = [
   {
@@ -41,7 +43,7 @@ export const sidebarRoutes = [
   {
     path: "/pricelist",
     title: "Daftar Harga",
-    element: <Home></Home>,
+    element: <PriceList></PriceList>,
     icon: "",
   },
   {
@@ -65,9 +67,9 @@ export const myAccountRoutes = [
     element: <MyAccount></MyAccount>,
   },
   {
-    path: "/my-account/profile-settings",
+    path: "/my-account/settings",
     title: "Pengaturan Profil",
-    element: <MyAccount></MyAccount>,
+    element: <AccountSettings></AccountSettings>,
   },
   {
     path: "/deposit",

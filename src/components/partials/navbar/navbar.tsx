@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 import logoIcon from "@/assets/Logo.svg";
 
-import { Button } from "../button";
+import { Button } from "../../ui/button";
 import Sidebar from "./sidebar";
 
 const Navbar = () => {
