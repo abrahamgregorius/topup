@@ -13,11 +13,12 @@ import {
     AccordionTrigger,
 } from "../ui/accordion";
 
+
 const settingsRoutes = [
     {
         isGroup: true,
         title: "Akun",
-        icon: <PersonIcon />,
+        icon: <img src={personIcon}></img>,
         paths: [
             {
                 name: "Akun Saya",
@@ -32,25 +33,25 @@ const settingsRoutes = [
     {
         isGroup: false,
         title: "Riwayat Transaksi",
-        icon: <PersonIcon />,
+        icon: <img src={timeSquareIcon}></img>,
         path: "/history",
     },
     {
         isGroup: false,
         title: "Deposit",
-        icon: <PersonIcon />,
+        icon: <img src={walletIcon}></img>,
         path: "/deposit",
     },
     {
         isGroup: false,
         title: "Bantuan",
-        icon: <PersonIcon />,
+        icon: <img src={infoSquareIcon}></img>,
         path: "/help",
     },
     {
         isGroup: false,
         title: "Aktivitas Akun",
-        icon: <PersonIcon />,
+        icon: <img src={chartIcon}></img>,
         path: "/activity",
     },
     {
@@ -64,31 +65,35 @@ const settingsRoutes = [
 const MenuBar = () => {
     return (
         <>
-            <div className="px-7 py-8 space-y-3 w-1/4">
+            <div className="px-7 py-8 w-full sm:w-1/4">
                 {settingsRoutes.map((route) => {
                     if (route.isGroup)
                         return (
                             <>
-                                <Accordion type="single" collapsible>
-                                    <AccordionItem value="item-1">
-                                        <AccordionTrigger className="flex gap-2 px-5 py-3 items-center rounded-full">
-                                            {route.title}
+                                <Accordion className="px-5 rounded-full" type="single" collapsible>
+                                    <AccordionItem value="item-1" className="hover:no-underline border-0">
+                                        <AccordionTrigger className="hover:no-underline">
+                                            <div className="flex justify-start gap-3">
+                                                {route.icon}
+                                                {route.title}
+                                            </div>
                                         </AccordionTrigger>
                                         {route.paths?.map((path) => {
                                             return (
                                                 <>
-                                                <AccordionContent>
-                                                    <Link
-                                                        to={path.path}
-                                                        className={`flex px-5 py-2 items-center rounded-full ${
-                                                            location.pathname ===
-                                                            route.path
-                                                                ? "bg-[#191E00] text-[#D0FD00] font-semibold"
-                                                                : ""
-                                                        }`} >
-                                                        {path.name}
-                                                    </Link>
-                                                </AccordionContent>
+                                                    <AccordionContent>
+                                                        <Link
+                                                            to={path.path as string}
+                                                            className={`flex px-5 py-3 items-center rounded-full ${
+                                                                location.pathname ===
+                                                                path.path
+                                                                    ? "bg-[#191E00] text-[#D0FD00] font-semibold"
+                                                                    : ""
+                                                            }`}
+                                                        >
+                                                            {path.name}
+                                                        </Link>
+                                                    </AccordionContent>
                                                 </>
                                             );
                                         })}
@@ -97,19 +102,17 @@ const MenuBar = () => {
                             </>
                         );
                     return (
-                        <div>
-                            <Link
-                                to={route.path as string}
-                                className={`flex gap-2 px-5 py-3 items-center rounded-full ${
-                                    location.pathname === route.path
-                                        ? "bg-[#191E00] text-[#D0FD00] font-semibold"
-                                        : ""
-                                }`}
-                            >
-                                {route.icon}
-                                {route.title}
-                            </Link>
-                        </div>
+                        <Link
+                            to={route.path as string}
+                            className={`flex gap-2 px-5 mb-2 py-3 items-center rounded-full ${
+                                location.pathname === route.path
+                                    ? "bg-[#191E00] text-[#D0FD00] font-semibold"
+                                    : ""
+                            }`}
+                        >
+                            {route.icon}
+                            {route.title}
+                        </Link>
                     );
                 })}
             </div>
