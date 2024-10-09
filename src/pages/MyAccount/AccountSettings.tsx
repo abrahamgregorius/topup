@@ -3,8 +3,6 @@ import Content from "@/components/partials/Content";
 import Main from "@/components/partials/Main";
 import MenuBar from "@/components/partials/MenuBar";
 
-import React from "react";
-
 const AccountSettings = () => {
     return (
         <Main>

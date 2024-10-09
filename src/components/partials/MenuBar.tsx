@@ -37,10 +37,27 @@ const settingsRoutes = [
         path: "/history",
     },
     {
-        isGroup: false,
+        isGroup: true,
         title: "Deposit",
         icon: <img src={walletIcon}></img>,
-        path: "/deposit",
+        paths: [
+            {
+                name: "Riwayat Deposit",
+                path: "/deposit/history"
+            },
+            {
+                name: "Top Up Saldo",
+                path: "/deposit/topup"
+            },
+            {
+                name: "Transfer Saldo",
+                path: "/deposit/transfer"
+            },
+            {
+                name: "Mutasi Saldo",
+                path: "/deposit/mutasi"
+            },
+        ],
     },
     {
         isGroup: false,
@@ -73,7 +90,7 @@ const MenuBar = () => {
                                 <Accordion className="px-5 rounded-full" type="single" collapsible>
                                     <AccordionItem value="item-1" className="hover:no-underline border-0">
                                         <AccordionTrigger className="hover:no-underline">
-                                            <div className="flex justify-start gap-3">
+                                            <div className="flex text-[15px] justify-start gap-3">
                                                 {route.icon}
                                                 {route.title}
                                             </div>

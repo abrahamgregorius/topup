@@ -1,18 +1,18 @@
+import React from 'react'
 import Container from '@/components/partials/Container'
 import Content from '@/components/partials/Content'
 import Main from '@/components/partials/Main'
 import MenuBar from '@/components/partials/MenuBar'
-import React from 'react'
 
-const Deposit = () => {
+const DepositMutasi = () => {
   return (
     <>
-        <Main>
+      <Main>
             <Container>
                 <div className="flex flex-col sm:flex-row">
                     <MenuBar />
                     <Content>
-                      
+                      DepositMutasi
                     </Content>
                   </div>
             </Container>
@@ -21,4 +21,4 @@ const Deposit = () => {
   )
 }
 
-export default Deposit
+export default DepositMutasi

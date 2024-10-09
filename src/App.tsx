@@ -16,6 +16,10 @@ import timeSquareIcon from "@/assets/Iconly/Curved/Bold/Time Square.svg"
 import buyIcon from "@/assets/Iconly/Curved/Bold/Buy.svg"
 import gameIcon from "@/assets/Iconly/Curved/Bold/Game.svg"
 import callIcon from "@/assets/Iconly/Curved/Bold/Call.svg"
+import DepositHistory from "./pages/Deposit/DepositHistory";
+import DepositTopup from "./pages/Deposit/DepositTopup";
+import DepositTransfer from "./pages/Deposit/DepositTransfer";
+import DepositMutasi from "./pages/Deposit/DepositMutasi";
 
 export const authRoutes = [
   {
@@ -93,7 +97,30 @@ export const myAccountRoutes = [
   },
 ];
 
-export const allRoutes = [...authRoutes, ...sidebarRoutes, ...myAccountRoutes];
+export const depositRoutes = [
+  {
+    path: "/deposit/history",
+    title: "Riwayat Deposit",
+    element: <DepositHistory></DepositHistory>,
+  },
+  {
+    path: "/deposit/topup",
+    title: "Top Up Saldo",
+    element: <DepositTopup></DepositTopup>,
+  },
+  {
+    path: "/deposit/transfer",
+    title: "Transfer Saldo",
+    element: <DepositTransfer></DepositTransfer>,
+  },
+  {
+    path: "/deposit/mutasi",
+    title: "Mutasi Saldo",
+    element: <DepositMutasi></DepositMutasi>,
+  }
+]
+
+export const allRoutes = [...authRoutes, ...sidebarRoutes, ...myAccountRoutes, ...depositRoutes];
 
 export default function App() {
   return (

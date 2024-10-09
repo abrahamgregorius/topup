@@ -4,7 +4,7 @@ import Main from '@/components/partials/Main'
 import MenuBar from '@/components/partials/MenuBar'
 import React from 'react'
 
-const Deposit = () => {
+const DepositTopup = () => {
   return (
     <>
         <Main>
@@ -12,13 +12,14 @@ const Deposit = () => {
                 <div className="flex flex-col sm:flex-row">
                     <MenuBar />
                     <Content>
-                      
+                        DepositTopup
                     </Content>
                   </div>
             </Container>
         </Main>
     </>
-  )
+
+    )
 }
 
-export default Deposit
+export default DepositTopup

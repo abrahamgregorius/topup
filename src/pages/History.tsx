@@ -155,58 +155,31 @@ const History = () => {
 
                             {/* Body */}
                             <div className="history-body">
-                                <Table>
-                                    <TableHeader>
-                                        <TableRow>
-                                            <TableHead>Nomor Pesanan</TableHead>
-                                            <TableHead>Game</TableHead>
-                                            <TableHead>Item</TableHead>
-                                            <TableHead>Harga</TableHead>
-                                            <TableHead>Status</TableHead>
-                                        </TableRow>
-                                    </TableHeader>
-                                    <TableBody>
-                                        <TableRow>
-                                            <TableCell>
-                                                ML-1692890632-JAI15CJD5Y9Y5OH
-                                            </TableCell>
-                                            <TableCell>Mobile Legend</TableCell>
-                                            <TableCell>706 Diamonds</TableCell>
-                                            <TableCell>Rp 170.400</TableCell>
-                                            <TableCell>
+                                {/* Table */}
+                                <table className="w-full mt-7 border-collapse">
+                                    <thead className="">
+                                        <tr className="bg-[#1D1F21]">
+                                            <td className="py-4 px-5 text-lg font-semibold">Nomor Pesanan</td>
+                                            <td className="py-4 px-5 text-lg font-semibold">Game</td>
+                                            <td className="py-4 px-5 text-lg font-semibold">Item</td>
+                                            <td className="py-4 px-5 text-lg font-semibold">Harga</td>
+                                            <td className="py-4 px-5 text-lg font-semibold">Status</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr className="">
+                                            <td className="mt-3 py-3 px-5 bg-[#151617]" >SL-2139481234-4321421</td>
+                                            <td className="mt-3 py-3 px-5 bg-[#151617]" >Mobile Legends</td>
+                                            <td className="mt-3 py-3 px-5 bg-[#151617]" >706 Diamonds</td>
+                                            <td className="mt-3 py-3 px-5 bg-[#151617]" >Dibayar</td>
+                                            <td className="mt-3 py-3 px-5 bg-[#151617]" >
                                                 <Badge className="bg-[#8CF9011F] text-[#D0FD00]">
                                                     Sukses
                                                 </Badge>
-                                            </TableCell>
-                                        </TableRow>
-                                        <TableRow>
-                                            <TableCell>
-                                                ML-1692890632-JAI15CJD5Y9Y5OH
-                                            </TableCell>
-                                            <TableCell>Mobile Legend</TableCell>
-                                            <TableCell>706 Diamonds</TableCell>
-                                            <TableCell>Rp 170.400</TableCell>
-                                            <TableCell>
-                                                <Badge className="bg-[#8CF9011F] text-[#D0FD00]">
-                                                    Sukses
-                                                </Badge>
-                                            </TableCell>
-                                        </TableRow>
-                                        <TableRow>
-                                            <TableCell>
-                                                ML-1692890632-JAI15CJD5Y9Y5OH
-                                            </TableCell>
-                                            <TableCell>Mobile Legend</TableCell>
-                                            <TableCell>706 Diamonds</TableCell>
-                                            <TableCell>Rp 170.400</TableCell>
-                                            <TableCell>
-                                                <Badge className="bg-[#8CF9011F] text-[#D0FD00]">
-                                                    Sukses
-                                                </Badge>
-                                            </TableCell>
-                                        </TableRow>
-                                    </TableBody>
-                                </Table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </Content>
                     </div>
