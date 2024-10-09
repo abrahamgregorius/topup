@@ -10,9 +10,9 @@ interface propsType {
 const Main = (props: propsType) => {
   return (
         <>
-            <Navbar></Navbar>
-                {props.children}
-            <Footer></Footer>
+            <Navbar/>
+            {props.children}
+            <Footer/>
         </>
     )
 }

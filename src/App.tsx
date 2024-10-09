@@ -11,6 +11,11 @@ import Contact from "./pages/Contact";
 import History from "./pages/History";
 import PriceList from "./pages/PriceList";
 import AccountSettings from "./pages/MyAccount/AccountSettings";
+import homeIcon from "@/assets/Iconly/Curved/Bold/Home.svg"
+import timeSquareIcon from "@/assets/Iconly/Curved/Bold/Time Square.svg"
+import buyIcon from "@/assets/Iconly/Curved/Bold/Buy.svg"
+import gameIcon from "@/assets/Iconly/Curved/Bold/Game.svg"
+import callIcon from "@/assets/Iconly/Curved/Bold/Call.svg"
 
 export const authRoutes = [
   {
@@ -32,31 +37,31 @@ export const sidebarRoutes = [
     path: "/",
     title: "Beranda",
     element: <Home></Home>,
-    icon: "",
+    icon: <img src={homeIcon}></img>,
   },
   {
     path: "/history",
     title: "Riwayat Pemesanan",
     element: <History></History>,
-    icon: "",
+    icon: <img src={timeSquareIcon}></img>,
   },
   {
     path: "/pricelist",
     title: "Daftar Harga",
     element: <PriceList></PriceList>,
-    icon: "",
+    icon: <img src={buyIcon}></img>,
   },
   {
     path: "/products",
     title: "Semua Produk",
     element: <Products></Products>,
-    icon: "",
+    icon: <img src={gameIcon}></img>,
   },
   {
     path: "/contact",
     title: "Hubungi Kami",
     element: <Contact></Contact>,
-    icon: "",
+    icon: <img src={callIcon}></img>,
   },
 ];
 

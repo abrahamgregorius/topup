@@ -10,13 +10,8 @@ import {
     TableRow,
 } from "@/components/ui/table";
 import { SearchIcon } from "lucide-react";
-import { Link } from "react-router-dom";
-import timeSquareIcon from "@/assets/Iconly/Curved/Bold/Time Square.svg";
-import personIcon from "@/assets/Iconly/Curved/Bold/Profile.svg";
-import walletIcon from "@/assets/Iconly/Curved/Bold/Wallet.svg";
-import infoSquareIcon from "@/assets/Iconly/Curved/Bold/Info Square.svg";
-import chartIcon from "@/assets/Iconly/Curved/Bold/Chart.svg";
 import MenuBar from "@/components/partials/MenuBar";
+import Content from "@/components/partials/Content";
 
 const History = () => {
     return (
@@ -114,7 +109,7 @@ const History = () => {
                         <MenuBar></MenuBar>
 
                         {/* Right history item */}
-                        <div className="history-item w-full flex flex-col gap-4">
+                        <Content>
                             {/* Head */}
                             <div className="history-head">
                                 <h2 className="text-xl font-bold">
@@ -213,7 +208,7 @@ const History = () => {
                                     </TableBody>
                                 </Table>
                             </div>
-                        </div>
+                        </Content>
                     </div>
                 </Container>
             </Main>

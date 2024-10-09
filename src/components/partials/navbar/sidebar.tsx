@@ -43,7 +43,7 @@ const Sidebar = ({ setShowSidebar, showSidebar }: SidebarProps) => {
                   : ""
               }`}>
               {/* Ini buat iconnya set dari routes harusnya */}
-              <HomeIcon />
+              {route.icon}
               {route.title}
             </Link>
           ))}

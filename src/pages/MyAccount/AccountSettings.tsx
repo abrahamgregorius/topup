@@ -1,6 +1,8 @@
 import Container from "@/components/partials/Container";
+import Content from "@/components/partials/Content";
 import Main from "@/components/partials/Main";
 import MenuBar from "@/components/partials/MenuBar";
+
 import React from "react";
 
 const AccountSettings = () => {
@@ -9,9 +11,9 @@ const AccountSettings = () => {
             <Container>
                 <div className="flex flex-col sm:flex-row">
                     <MenuBar></MenuBar>
-                    <div className="grow w-full py-8">
+                    <Content>
                         AccountSettings
-                    </div>
+                    </Content>
                 </div>
             </Container>
         </Main>

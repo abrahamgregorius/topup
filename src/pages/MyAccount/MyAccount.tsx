@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import Main from "@/components/partials/Main";
 import Container from "@/components/partials/Container";
 import MenuBar from "@/components/partials/MenuBar";
+import Content from "@/components/partials/Content";
 
 const MyAccount = () => {
     return (
@@ -23,8 +24,8 @@ const MyAccount = () => {
             <Container>
                 <div className="flex flex-col sm:flex-row">
                     <MenuBar />
-                    <div className="grow w-full py-8">
-                        <div className="grid grid-cols-2 w-full gap-7">
+                    <Content>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 w-full gap-7">
                             {/* Card Left */}
                             <div className="rounded-3xl bg-[#151617]">
                                 <div className="flex justify-between p-7">
@@ -50,7 +51,7 @@ const MyAccount = () => {
                                     <SettingsIcon />
                                 </div>
                                 <div className="border-t border-[#202328] w-full"></div>
-                                <div className="flex gap-5 p-7">
+                                <div className="flex flex-col sm:flex-row gap-5 p-7">
                                     <p className="flex gap-2">
                                         <PhoneIcon />
                                         082688117634
@@ -62,7 +63,7 @@ const MyAccount = () => {
                                 </div>
                             </div>
                             {/* Card Right */}
-                            <div className="flex flex-col justify-between rounded-3xl p-7 bg-[#151617]">
+                            <div className="flex flex-col gap-4 sm:gap-0 justify-between rounded-3xl p-7 bg-[#151617]">
                                 <div className="flex flex-col gap-2">
                                     <p className="text-3xl text-[#D0FD00] font-bold">
                                         Rp 273.000
@@ -83,9 +84,9 @@ const MyAccount = () => {
                             <p className="font-bold text-2xl mb-5">
                                 Total Transaksi
                             </p>
-                            <div className="grid grid-cols-4 gap-7 h-[182px]">
+                            <div className="grid grid-cols-1 sm:grid-cols-4 gap-7 h-auto sm:h-[182px]">
                                 <div className="p-6 bg-[#D0FD00] text-[#151617] rounded-3xl flex flex-col justify-between">
-                                    <ShoppingCartIcon className="self-end" />
+                                    <ShoppingCartIcon className="self-end " />
                                     <div>
                                         <p className="font-bold text-3xl">54</p>
                                         <p>Seluruh Transaksi</p>
@@ -119,8 +120,8 @@ const MyAccount = () => {
                                 Riwayat Transaksi Hari Ini
                             </p>
                         </div>
-                    </div>
-                  </div>
+                    </Content>
+                </div>
             </Container>
         </Main>
     );
