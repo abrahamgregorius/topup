@@ -20,6 +20,7 @@ import DepositHistory from "./pages/Deposit/DepositHistory";
 import DepositTopup from "./pages/Deposit/DepositTopup";
 import DepositTransfer from "./pages/Deposit/DepositTransfer";
 import DepositMutasi from "./pages/Deposit/DepositMutasi";
+import Help from "./pages/Help";
 
 export const authRoutes = [
   {
@@ -88,7 +89,7 @@ export const myAccountRoutes = [
   {
     path: "/help",
     title: "Bantuan",
-    element: <MyAccount></MyAccount>,
+    element: <Help></Help>,
   },
   {
     path: "/activity",
