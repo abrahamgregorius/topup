@@ -2,9 +2,6 @@ import Container from "@/components/partials/Container";
 import Content from "@/components/partials/Content";
 import Main from "@/components/partials/Main";
 import MenuBar from "@/components/partials/MenuBar";
-import { Button } from "@/components/ui/button";
-import { SearchIcon, WalletIcon } from "lucide-react";
-import React from "react";
 import rect from "@/assets/rect.png";
 
 const icons = [
