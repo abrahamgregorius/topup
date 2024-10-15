@@ -2,6 +2,7 @@ import Container from "@/components/partials/Container";
 import Content from "@/components/partials/Content";
 import Main from "@/components/partials/Main";
 import MenuBar from "@/components/partials/MenuBar";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ClockIcon, SearchIcon, WalletIcon } from "lucide-react";
 import React from "react";
@@ -87,43 +88,39 @@ const DepositHistory = () => {
                                     <table className="w-full">
                                         <thead className="">
                                             <tr className="bg-[#1D1F21]">
-                                                <td className="py-4 px-5 text-lg font-semibold">
+                                                <th className="py-4 px-5 text-lg font-semibold">
                                                     Nomor Pesanan
-                                                </td>
-                                                <td className="py-4 px-5 text-lg font-semibold">
+                                                </th>
+                                                <th className="py-4 px-5 text-lg font-semibold">
                                                     Saldo
-                                                </td>
-                                                <td className="py-4 px-5 text-lg font-semibold">
+                                                </th>
+                                                <th className="py-4 px-5 text-lg font-semibold">
                                                     Metode Pembayaran
-                                                </td>
-                                                <td className="py-4 px-5 text-lg font-semibold">
+                                                </th>
+                                                <th className="py-4 px-5 text-lg font-semibold">
                                                     Status
-                                                </td>
+                                                </th>
                                             </tr>
                                         </thead>
-                                    </table>
-                                    <div className="overflow-x-scroll h-64">
-                                        {" "}
-                                        {/* Adjust height as per need */}
-                                        <table className="w-full">
-                                            <tbody>
-                                                <tr className="">
-                                                    <td className="mt-3 py-3 px-5 bg-[#151617]">
-                                                        SL-2139481234-4321421
+                                        <tbody>
+                                                <tr className="bg-[#151617] ">
+                                                    <td className="mt-3 py-3 px-5">
+                                                        SL-2139481234
                                                     </td>
-                                                    <td className="mt-3 py-3 px-5 bg-[#151617]">
+                                                    <td className="mt-3 py-3 px-5 text-center text-[#D0FD00]">
                                                         + Rp. 200.000
                                                     </td>
-                                                    <td className="mt-3 py-3 px-5 bg-[#151617]">
+                                                    <td className="mt-3 py-3 px-5 text-center">
                                                         Bank BRI
                                                     </td>
-                                                    <td className="mt-3 py-3 px-5 bg-[#151617]">
-                                                        Dibayar
+                                                    <td className="mt-3 py-3 px-5 text-center">
+                                                        <Badge className="bg-[#8CF9011F] text-[#D0FD00]">
+                                                            Dibayar
+                                                        </Badge>
                                                     </td>
                                                 </tr>
                                             </tbody>
-                                        </table>
-                                    </div>
+                                    </table>
                                 </div>
                             </div>
                         </Content>
