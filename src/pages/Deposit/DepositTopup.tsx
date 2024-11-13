@@ -117,9 +117,7 @@ const DepositTopup = () => {
                                                             <p className="font-bold text-3xl">
                                                                 BNI
                                                             </p>
-                                                            
                                                             <p><span className="text-[#D0FD00]">|</span> Dicek 1-10 Menit</p>
-
                                                         </div>
 
                                                         <p className="text-xl font-semibold text-[#D0FD00]">
