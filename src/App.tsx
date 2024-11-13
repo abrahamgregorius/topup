@@ -21,6 +21,7 @@ import DepositTopup from "./pages/Deposit/DepositTopup";
 import DepositTransfer from "./pages/Deposit/DepositTransfer";
 import DepositMutasi from "./pages/Deposit/DepositMutasi";
 import Help from "./pages/Help";
+import Activity from "./pages/MyAccount/Activity";
 
 export const authRoutes = [
   {
@@ -94,7 +95,7 @@ export const myAccountRoutes = [
   {
     path: "/activity",
     title: "Aktivitas Akun",
-    element: <MyAccount></MyAccount>,
+    element: <Activity></Activity>,
   },
 ];
 
