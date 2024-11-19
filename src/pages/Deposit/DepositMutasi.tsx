@@ -5,6 +5,13 @@ import Main from "@/components/partials/Main";
 import MenuBar from "@/components/partials/MenuBar";
 import { SearchIcon, WalletIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Table from "@/components/partials/table/Table";
+import TableHeader from "@/components/partials/table/TableHeader";
+import TableHead from "@/components/partials/table/TableHead";
+import TableBody from "@/components/partials/table/TableBody";
+import TableRow from "@/components/partials/table/TableRow";
+import TableData from "@/components/partials/table/TableData";
+import Paginations from "@/components/partials/Paginations";
 
 const DepositMutasi = () => {
     return (
@@ -82,41 +89,33 @@ const DepositMutasi = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-full mt-7 overflow-x-scroll sm:overflow-auto">
-                                    {/* Table */}
-                                    <table className="w-full">
-                                        <thead className="">
-                                            <tr className="bg-[#1D1F21]">
-                                                <th className="py-4 px-5 text-lg font-semibold">
-                                                    Mutasi
-                                                </th>
-                                                <th className="py-4 px-5 text-lg font-semibold">
-                                                    Jenis
-                                                </th>
-                                                <th className="py-4 px-5 text-lg font-semibold">
-                                                    Saldo
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr className="bg-[#151617] ">
-                                                <td className="mt-3 py-6 px-5">
-                                                    <div className="flex flex-col gap-1">
-                                                      <span className="text-lg">SL-1692890632-JAI15CJD5Y9Y5OH</span> 
-                                                      <span className="text-md">23 Aug 2023, 16:83:23</span>
-                                                    </div>
+                                <Table>
+                                    <TableHead>
+                                        <TableHeader>Mutasi</TableHeader>
+                                        <TableHeader>Jenis</TableHeader>
+                                        <TableHeader>Saldo</TableHeader>
+                                    </TableHead>
+                                    <TableBody>
+                                        <TableRow>
+                                            <TableData leftTable={false}>
+                                                <div className="flex flex-col gap-1">
+                                                    <span className="text-lg">
+                                                        SL-1692890632-JAI15CJD5Y9Y5OH
+                                                    </span>
+                                                    <span className="text-md">
+                                                        23 Aug 2023, 16:83:23
+                                                    </span>
+                                                </div>
+                                            </TableData>
+                                            <TableData>Top Up Game</TableData>
+                                            <TableData className="text-[#F63030]">
+                                                - Rp 140.700
+                                            </TableData>
+                                        </TableRow>
+                                    </TableBody>
+                                </Table>
 
-                                                </td>
-                                                <td className="mt-3 py-3 px-5 text-center">
-                                                    Top Up Game
-                                                </td>
-                                                <td className="mt-3 py-3 px-5 text-center text-[#F63030]">
-                                                  - Rp 140.700
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
+                                <Paginations></Paginations>
                             </div>
                         </Content>
                     </div>

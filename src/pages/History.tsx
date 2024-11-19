@@ -1,17 +1,17 @@
 import { Badge } from "@/components/ui/badge";
 import Container from "@/components/partials/Container";
 import Main from "@/components/partials/Main";
-import {
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
-} from "@/components/ui/table";
 import { SearchIcon } from "lucide-react";
 import MenuBar from "@/components/partials/MenuBar";
 import Content from "@/components/partials/Content";
+import BadgeNew from "@/components/partials/BadgeNew";
+import Paginations from "@/components/partials/Paginations";
+import TableData from "@/components/partials/table/TableData";
+import Table from "@/components/partials/table/Table";
+import TableHead from "@/components/partials/table/TableHead";
+import TableHeader from "@/components/partials/table/TableHeader";
+import TableBody from "@/components/partials/table/TableBody";
+import TableRow from "@/components/partials/table/TableRow";
 
 const History = () => {
     return (
@@ -70,30 +70,30 @@ const History = () => {
                             {/* Body */}
                             <div className="history-body">
                                 {/* Table */}
-                                <table className="w-full mt-7 border-collapse">
-                                    <thead className="">
-                                        <tr className="bg-[#1D1F21]">
-                                            <td className="py-4 px-5 text-lg font-semibold">Nomor Pesanan</td>
-                                            <td className="py-4 px-5 text-lg font-semibold">Game</td>
-                                            <td className="py-4 px-5 text-lg font-semibold">Item</td>
-                                            <td className="py-4 px-5 text-lg font-semibold">Harga</td>
-                                            <td className="py-4 px-5 text-lg font-semibold">Status</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr className="">
-                                            <td className="mt-3 py-3 px-5 bg-[#151617]" >SL-2139481234-4321421</td>
-                                            <td className="mt-3 py-3 px-5 bg-[#151617]" >Mobile Legends</td>
-                                            <td className="mt-3 py-3 px-5 bg-[#151617]" >706 Diamonds</td>
-                                            <td className="mt-3 py-3 px-5 bg-[#151617]" >Dibayar</td>
-                                            <td className="mt-3 py-3 px-5 bg-[#151617]" >
-                                                <Badge className="bg-[#8CF9011F] text-[#D0FD00]">
+                                <Table>
+                                    <TableHead>
+                                        <TableHeader>Nomor Pesanan</TableHeader>
+                                        <TableHeader>Game</TableHeader>
+                                        <TableHeader>Item</TableHeader>
+                                        <TableHeader>Harga</TableHeader>
+                                        <TableHeader>Status</TableHeader>
+                                    </TableHead>
+                                    <TableBody>
+                                        <TableRow>
+                                            <TableData>SL-2139481234-4321421</TableData>
+                                            <TableData>Mobile Legends</TableData>
+                                            <TableData>706 Diamonds</TableData>
+                                            <TableData>Dibayar</TableData>
+                                            <TableData>
+                                                <BadgeNew type="success">
                                                     Sukses
-                                                </Badge>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                                </BadgeNew>
+                                            </TableData>
+                                        </TableRow>
+                                    </TableBody>
+                                </Table>
+
+                                <Paginations></Paginations>
                             </div>
                         </Content>
                     </div>

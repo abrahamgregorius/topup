@@ -2,6 +2,13 @@ import Container from "@/components/partials/Container";
 import Content from "@/components/partials/Content";
 import Main from "@/components/partials/Main";
 import MenuBar from "@/components/partials/MenuBar";
+import Paginations from "@/components/partials/Paginations";
+import Table from "@/components/partials/table/Table";
+import TableBody from "@/components/partials/table/TableBody";
+import TableData from "@/components/partials/table/TableData";
+import TableHead from "@/components/partials/table/TableHead";
+import TableHeader from "@/components/partials/table/TableHeader";
+import TableRow from "@/components/partials/table/TableRow";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ClockIcon, SearchIcon, WalletIcon } from "lucide-react";
@@ -83,45 +90,24 @@ const DepositHistory = () => {
                                     </div>
                                 </div>
 
-                                <div className="w-full mt-7 overflow-x-scroll sm:overflow-auto">
-                                    {/* Table */}
-                                    <table className="w-full">
-                                        <thead className="">
-                                            <tr className="bg-[#1D1F21]">
-                                                <th className="py-4 px-5 text-lg font-semibold">
-                                                    Nomor Pesanan
-                                                </th>
-                                                <th className="py-4 px-5 text-lg font-semibold">
-                                                    Saldo
-                                                </th>
-                                                <th className="py-4 px-5 text-lg font-semibold">
-                                                    Metode Pembayaran
-                                                </th>
-                                                <th className="py-4 px-5 text-lg font-semibold">
-                                                    Status
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr className="bg-[#151617] ">
-                                                    <td className="mt-3 py-3 px-5">
-                                                        SL-2139481234
-                                                    </td>
-                                                    <td className="mt-3 py-3 px-5 text-center text-[#D0FD00]">
-                                                        + Rp. 200.000
-                                                    </td>
-                                                    <td className="mt-3 py-3 px-5 text-center">
-                                                        Bank BRI
-                                                    </td>
-                                                    <td className="mt-3 py-3 px-5 text-center">
-                                                        <Badge className="bg-[#8CF9011F] text-[#D0FD00]">
-                                                            Dibayar
-                                                        </Badge>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                    </table>
-                                </div>
+                                {/* Table */}
+                                <Table>
+                                    <TableHead>
+                                        <TableHeader>Nomor Pesanan</TableHeader>
+                                        <TableHeader>Saldo</TableHeader>
+                                        <TableHeader>Metode Pembayaran</TableHeader>
+                                        <TableHeader>Status</TableHeader>
+                                    </TableHead>
+                                    <TableBody>
+                                        <TableRow>
+                                            <TableData>SL-2139481234</TableData>
+                                            <TableData className="text-[#D0FD00]">+ Rp. 200.000</TableData>
+                                            <TableData>Bank BRI</TableData>
+                                            <TableData>Dibayar</TableData>
+                                        </TableRow>
+                                    </TableBody>
+                                </Table>
+                                <Paginations></Paginations>
                             </div>
                         </Content>
                     </div>

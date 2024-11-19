@@ -22,7 +22,7 @@ const AccountSettings = () => {
                                     {/* Settings head */}
                                     <div className="flex flex-col">
                                         <p className="font-bold text-2xl mb-2">
-                                            Bantuan
+                                            Pengaturan Profil
                                         </p>
                                         <p className="text-slate-200 font-light">
                                             Informasi ini bersifat rahasia, jadi

@@ -17,6 +17,24 @@ import Main from "@/components/partials/Main";
 import Container from "@/components/partials/Container";
 import MenuBar from "@/components/partials/MenuBar";
 import Content from "@/components/partials/Content";
+import Table from "@/components/partials/table/Table";
+import TableHead from "@/components/partials/table/TableHead";
+import TableBody from "@/components/partials/table/TableBody";
+import TableHeader from "@/components/partials/table/TableHeader";
+import TableRow from "@/components/partials/table/TableRow";
+import TableData from "@/components/partials/table/TableData";
+import { Badge } from "@/components/ui/badge";
+import BadgeNew from "@/components/partials/BadgeNew";
+import {
+    Pagination,
+    PaginationContent,
+    PaginationEllipsis,
+    PaginationItem,
+    PaginationLink,
+    PaginationNext,
+    PaginationPrevious,
+} from "@/components/ui/pagination";
+import Paginations from "@/components/partials/Paginations";
 
 const MyAccount = () => {
     return (
@@ -119,6 +137,33 @@ const MyAccount = () => {
                             <p className="font-bold text-2xl mb-5">
                                 Riwayat Transaksi Hari Ini
                             </p>
+
+                            <Table>
+                                <TableHead>
+                                    <TableHeader>Nomor Pesanan</TableHeader>
+                                    <TableHeader>Game</TableHeader>
+                                    <TableHeader>Item</TableHeader>
+                                    <TableHeader>Harga</TableHeader>
+                                    <TableHeader>Status</TableHeader>
+                                </TableHead>
+                                <TableBody>
+                                    <TableRow>
+                                        <TableData>
+                                            ML-1692890632-JAI15CJD5Y9Y5OH
+                                        </TableData>
+                                        <TableData>Mobile Legend</TableData>
+                                        <TableData>706 Diamonds</TableData>
+                                        <TableData>Rp 170.400</TableData>
+                                        <TableData>
+                                            <BadgeNew type="success">
+                                                Sukses
+                                            </BadgeNew>
+                                        </TableData>
+                                    </TableRow>
+                                </TableBody>
+                            </Table>
+
+                            <Paginations></Paginations>
                         </div>
                     </Content>
                 </div>

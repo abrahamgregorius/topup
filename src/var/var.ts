@@ -17,6 +17,13 @@ const warningColor = "#FDB600";
 const successColor = "#8CF901";
 const infoColor = "#019FF9";
 
+export interface PropsType {
+  children?: React.ReactNode,
+  className?: string,
+  leftTable?: boolean,
+  type?: string
+}
+
 export {
   backgroundCardColor,
   backgroundDarkColor,

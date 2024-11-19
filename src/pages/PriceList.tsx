@@ -2,20 +2,20 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Container from "@/components/partials/Container";
 import Main from "@/components/partials/Main";
-import {
-    Table,
-    TableBody,
-    TableCell,
-    TableHead,
-    TableHeader,
-    TableRow,
-} from "@/components/ui/table";
 import { PersonIcon } from "@radix-ui/react-icons";
 import { SearchIcon } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
 import MenuBar from "@/components/partials/MenuBar";
 import Content from "@/components/partials/Content";
+import Table from "@/components/partials/table/Table";
+import TableHead from "@/components/partials/table/TableHead";
+import TableBody from "@/components/partials/table/TableBody";
+import TableHeader from "@/components/partials/table/TableHeader";
+import TableRow from "@/components/partials/table/TableRow";
+import TableData from "@/components/partials/table/TableData";
+import BadgeNew from "@/components/partials/BadgeNew";
+import Paginations from "@/components/partials/Paginations";
 
 const PriceList = () => {
     return (
@@ -54,8 +54,7 @@ const PriceList = () => {
                                         </div>
                                     </div>
 
-                                    <div className="hf-item flex flex-row items-center gap-3">
-                                        
+                                    <div className="hf-item flex flex-row items-center gap-3">        
                                         <label htmlFor="">Status</label>
                                         <div className="form-control flex items-center gap-2 w-[200px] h-[48px] px-5 rounded-full bg-[#1D1F21]">
                                             <input
@@ -70,28 +69,27 @@ const PriceList = () => {
 
                                 {/* Body */}
                                 <div className="plist-body">
-                                    <table className="w-full border-collapse">
-                                        <thead className="">
-                                            <tr className="bg-[#1D1F21]">
-                                                <td className="py-4 px-5 text-lg font-semibold">Code</td>
-                                                <td className="py-4 px-5 text-lg font-semibold">Item</td>
-                                                <td className="py-4 px-5 text-lg font-semibold">Harga</td>
-                                                <td className="py-4 px-5 text-lg font-semibold">Status</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr className="bg-[#151617] hover:bg-neutral-500 transition duration-200">
-                                                <td className="mt-3 py-3 px-5" >ML-1692890632-JAI15CJD5Y9Y5OH</td>
-                                                <td className="mt-3 py-3 px-5 " >Mobile Legends</td>
-                                                <td className="mt-3 py-3 px-5 " >Rp 170.400</td>
-                                                <td className="mt-3 py-3 px-5 " >
-                                                    <Badge className="bg-[#8CF9011F] text-[#D0FD00]">
+                                    <Table>
+                                        <TableHead>
+                                            <TableHeader>Code</TableHeader>
+                                            <TableHeader>Item</TableHeader>
+                                            <TableHeader>Harga</TableHeader>
+                                            <TableHeader>Status</TableHeader>
+                                        </TableHead>
+                                        <TableBody>
+                                            <TableRow>
+                                                <TableData>ML-1692890632-JAI15CJD5Y9Y5OH</TableData>
+                                                <TableData>Mobile Legends</TableData>
+                                                <TableData>Rp 170.400</TableData>
+                                                <TableData>
+                                                    <BadgeNew type="success">
                                                         Sukses
-                                                    </Badge>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                                    </BadgeNew>
+                                                </TableData>
+                                            </TableRow>
+                                        </TableBody>
+                                    </Table>
+                                    <Paginations></Paginations>
 
                                 </div>
                             </div>
