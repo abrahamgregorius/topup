@@ -1,6 +1,7 @@
 /** @format */
 
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const VerticalCard = ({ data, isGame = true }) => {
   return (
@@ -27,9 +28,11 @@ const VerticalCard = ({ data, isGame = true }) => {
             {data.company}
           </p>
         </div>
-        <p className="flex gap-1 text-[14px] font-semibold text-[#D0FD00] items-center mt-2">
-          Top Up <ArrowRight />
-        </p>
+        <Link to="/order">
+          <p className="flex gap-1 text-[14px] font-semibold text-[#D0FD00] items-center mt-2">
+            Top Up <ArrowRight />
+          </p>
+        </Link>
       </div>
     </div>
   );

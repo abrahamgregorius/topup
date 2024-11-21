@@ -23,6 +23,7 @@ import DepositMutasi from "./pages/Deposit/DepositMutasi";
 import Help from "./pages/Help";
 import Activity from "./pages/MyAccount/Activity";
 import Order from "./pages/Order";
+import Invoice from "./pages/Invoice";
 
 export const authRoutes = [
   {
@@ -125,10 +126,16 @@ export const depositRoutes = [
 
 export const orderRoutes = [
   {
-    path: "/order/",
+    path: "/order",
     title: "Order",
     element: <Order></Order>,
+  },
+  {
+    path: "/invoice",
+    title: "Invoice",
+    element: <Invoice></Invoice>,
   }
+
 ]
 
 export const allRoutes = [...authRoutes, ...sidebarRoutes, ...myAccountRoutes, ...depositRoutes, ...orderRoutes];
