@@ -109,7 +109,7 @@ const AccountSettings = () => {
                                     </div>
 
                                     {/* PIN Section */}
-                                    <div className="flex flex-row w-full items-end justify-between">
+                                    <div className="flex flex-col sm:flex-row w-full items-end justify-between">
                                         <div className="flex flex-col mt-7">
                                             <div className="flex gap-3 items-center">
                                                 <span className="font-bold text-2xl mb-2">
@@ -125,17 +125,17 @@ const AccountSettings = () => {
                                                 Saldo Wallet
                                             </p>
                                         </div>
-                                        <div className="flex flex-row h-[100px] gap-4 justify-center items-end">
+                                        <div className="flex flex-col sm:flex-row w-full sm:w-auto h-[100px] mt-5 gap-4 items-start sm:items-end">
                                             <Dialog>
-                                                <DialogTrigger>
+                                                <DialogTrigger className="w-full sm:w-auto">
                                                     <Button
-                                                        className="bg-zinc-800 rounded-lg"
+                                                        className="bg-zinc-800 rounded-lg w-full"
                                                         variant={"default"}
                                                     >
                                                         Reset PIN
                                                     </Button>
                                                 </DialogTrigger>
-                                                <DialogContent className="bg-[#0c0d0d] border-0 min-w-[750px]">
+                                                <DialogContent className="bg-[#0c0d0d] border-0 p-4 sm:w-auto sm:min-w-[500]">
                                                     <DialogHeader>
                                                         <DialogTitle className="flex flex-col gap-1">
                                                             <span className="text-2xl font-bold">
@@ -217,15 +217,15 @@ const AccountSettings = () => {
                                             </Dialog>
 
                                             <Dialog>
-                                                <DialogTrigger>
+                                                <DialogTrigger className="w-full">
                                                     <Button
-                                                        className="bg-[#0c0d0d] rounded-lg"
+                                                        className="bg-[#0c0d0d] rounded-lg w-full sm:w-auto"
                                                         variant={"default"}
                                                     >
                                                         Nonaktifkan
                                                     </Button>
                                                 </DialogTrigger>
-                                                <DialogContent className="bg-[#0c0d0d] border-0 min-w-[750px]">
+                                                <DialogContent className="bg-[#0c0d0d] border-0 sm:min-w-[500]">
                                                     <DialogHeader>
                                                         <DialogTitle className="flex flex-col gap-1">
                                                             <span className="text-2xl font-bold">
@@ -257,7 +257,7 @@ const AccountSettings = () => {
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div className="flex w-full justify-end mt-5">
+                                                            <div className="flex w-full justify-center sm:justify-end mt-5">
                                                                 <div className="flex flex-row gap-2">
                                                                     <Button className="bg-[#1D1F21] w-full rounded-3xl font-semibold text-sm sm:text-lg py-6">
                                                                         Batal
