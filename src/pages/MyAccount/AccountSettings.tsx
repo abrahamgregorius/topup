@@ -6,6 +6,14 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { TriangleAlert } from "lucide-react";
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog";
 
 const AccountSettings = () => {
     return (
@@ -118,18 +126,151 @@ const AccountSettings = () => {
                                             </p>
                                         </div>
                                         <div className="flex flex-row h-[100px] gap-4 justify-center items-end">
-                                            <Button
-                                                className="bg-zinc-800 rounded-lg"
-                                                variant={"default"}
-                                            >
-                                                Reset PIN
-                                            </Button>
-                                            <Button
-                                                className=""
-                                                variant={"ghost"}
-                                            >
-                                                Nonaktifkan
-                                            </Button>
+                                            <Dialog>
+                                                <DialogTrigger>
+                                                    <Button
+                                                        className="bg-zinc-800 rounded-lg"
+                                                        variant={"default"}
+                                                    >
+                                                        Reset PIN
+                                                    </Button>
+                                                </DialogTrigger>
+                                                <DialogContent className="bg-[#0c0d0d] border-0 min-w-[750px]">
+                                                    <DialogHeader>
+                                                        <DialogTitle className="flex flex-col gap-1">
+                                                            <span className="text-2xl font-bold">
+                                                                Reset PIN
+                                                            </span>
+                                                            <span className="text-md text-[#D4D4D4] font-normal">
+                                                                Reset PIN anda
+                                                                dengan
+                                                                memasukkan PIN
+                                                                lama anda.
+                                                            </span>
+                                                        </DialogTitle>
+                                                        <DialogDescription>
+                                                            <div className="grid grid-cols-1 sm:grid-cols-2 text-[#D4D4D4] gap-7 mt-7">
+                                                                <div className="input flex flex-col gap-2">
+                                                                    <label
+                                                                        className="font-semibold"
+                                                                        htmlFor=""
+                                                                    >
+                                                                        Nama Anda
+                                                                    </label>
+                                                                    <div className="form-control flex items-center gap-2 px-5 py-3 rounded-full bg-[#1D1F21]">
+                                                                        <input
+                                                                            className="bg-[#1D1F21]  rounded-full w-full h-full outline-none"
+                                                                            name=""
+                                                                            id=""
+                                                                            placeholder="Masukkan nama anda"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                                <div className="input flex flex-col gap-2">
+                                                                    <label
+                                                                        className="font-semibold"
+                                                                        htmlFor=""
+                                                                    >
+                                                                        Username
+                                                                    </label>
+                                                                    <div className="form-control flex items-center gap-2 w-full h-[48px] px-5 rounded-full bg-[#1D1F21]">
+                                                                        <input
+                                                                            type="text"
+                                                                            id="password"
+                                                                            placeholder="Masukkan username anda"
+                                                                            className="bg-[#1D1F21] w-full h-full outline-none"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className="grid grid-cols-1 sm:grid-cols-1 text-[#D4D4D4] gap-7 mt-7">
+                                                                <div className="input flex flex-col gap-2">
+                                                                    <label
+                                                                        className="font-semibold"
+                                                                        htmlFor=""
+                                                                    >
+                                                                        Password Akun Anda
+                                                                    </label>
+                                                                    <div className="form-control flex items-center gap-2 px-5 py-3 rounded-full bg-[#1D1F21]">
+                                                                        <input
+                                                                            className="bg-[#1D1F21]  rounded-full w-full h-full outline-none"
+                                                                            name=""
+                                                                            id=""
+                                                                            placeholder="Masukkan password akun anda"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className="flex w-full justify-end mt-5">
+                                                                <div className="flex flex-row gap-2">
+                                                                    <Button className="bg-[#1D1F21] w-full rounded-3xl font-semibold text-sm sm:text-lg py-6">
+                                                                        Batal
+                                                                    </Button>
+                                                                    <Button className="bg-[#D0FD00] text-[#0C0D0D] hover:text-[#D0FD00] w-full rounded-3xl font-semibold text-sm sm:text-lg py-6">
+                                                                        Reset PIN
+                                                                    </Button>
+                                                                </div>
+                                                            </div>
+                                                        </DialogDescription>
+                                                    </DialogHeader>
+                                                </DialogContent>
+                                            </Dialog>
+
+                                            <Dialog>
+                                                <DialogTrigger>
+                                                    <Button
+                                                        className="bg-[#0c0d0d] rounded-lg"
+                                                        variant={"default"}
+                                                    >
+                                                        Nonaktifkan
+                                                    </Button>
+                                                </DialogTrigger>
+                                                <DialogContent className="bg-[#0c0d0d] border-0 min-w-[750px]">
+                                                    <DialogHeader>
+                                                        <DialogTitle className="flex flex-col gap-1">
+                                                            <span className="text-2xl font-bold">
+                                                                Nonaktifkan PIN
+                                                            </span>
+                                                            <span className="text-md text-[#D4D4D4] font-normal">
+                                                                Reset PIN anda
+                                                                dengan
+                                                                memasukkan PIN
+                                                                lama anda.
+                                                            </span>
+                                                        </DialogTitle>
+                                                        <DialogDescription>
+                                                            <div className="grid grid-cols-1 sm:grid-cols-1 text-[#D4D4D4] gap-7 mt-7">
+                                                                <div className="input flex flex-col gap-2">
+                                                                    <label
+                                                                        className="font-semibold"
+                                                                        htmlFor=""
+                                                                    >
+                                                                        Password Akun Anda
+                                                                    </label>
+                                                                    <div className="form-control flex items-center gap-2 px-5 py-3 rounded-full bg-[#1D1F21]">
+                                                                        <input
+                                                                            className="bg-[#1D1F21]  rounded-full w-full h-full outline-none"
+                                                                            name=""
+                                                                            id=""
+                                                                            placeholder="Masukkan password akun anda"
+                                                                        />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div className="flex w-full justify-end mt-5">
+                                                                <div className="flex flex-row gap-2">
+                                                                    <Button className="bg-[#1D1F21] w-full rounded-3xl font-semibold text-sm sm:text-lg py-6">
+                                                                        Batal
+                                                                    </Button>
+                                                                    <Button className="bg-[#D0FD00] text-[#0C0D0D] hover:text-[#D0FD00] w-full rounded-3xl font-semibold text-sm sm:text-lg py-6">
+                                                                        Nonaktifkan
+                                                                    </Button>
+                                                                </div>
+                                                            </div>
+                                                        </DialogDescription>
+                                                    </DialogHeader>
+                                                </DialogContent>
+                                            </Dialog>
                                         </div>
                                     </div>
 
@@ -257,9 +398,9 @@ const AccountSettings = () => {
                                         </div>
                                     </div>
 
-                                    <button className="mt-7 h-[48px] text-lg font-bold px-5 rounded-full bg-[#D0FD00] hover:bg-[#1D1F21] text-[#1D1F21] hover:text-[#D0FD00] transition duration-300">
+                                    <Button className="mt-7 h-[48px] text-lg font-bold px-5 rounded-full bg-[#D0FD00] hover:bg-[#1D1F21] text-[#1D1F21] hover:text-[#D0FD00] transition duration-300">
                                         Ubah Kata Sandi
-                                    </button>
+                                    </Button>
                                 </div>
                             </div>
                         </div>

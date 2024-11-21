@@ -9,6 +9,14 @@ import BCALogo from "@/assets/Bank Logo/White/BCA.png";
 import BNILogo from "@/assets/Bank Logo/White/BTN.png";
 import BRILogo from "@/assets/Bank Logo/White/BRI.png";
 import MandiriLogo from "@/assets/Bank Logo/White/Mandiri.png";
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog";
 
 const DepositTopup = () => {
     return (
@@ -75,8 +83,13 @@ const DepositTopup = () => {
                                                             <p className="font-bold text-3xl">
                                                                 Mandiri
                                                             </p>
-                                                            
-                                                            <p><span className="text-[#D0FD00]">|</span> Dicek 1-10 Menit</p>
+
+                                                            <p>
+                                                                <span className="text-[#D0FD00]">
+                                                                    |
+                                                                </span>{" "}
+                                                                Dicek 1-10 Menit
+                                                            </p>
                                                         </div>
 
                                                         <p className="text-xl font-semibold text-[#D0FD00]">
@@ -96,8 +109,13 @@ const DepositTopup = () => {
                                                             <p className="font-bold text-3xl">
                                                                 BCA
                                                             </p>
-                                                            
-                                                            <p><span className="text-[#D0FD00]">|</span> Dicek 1-10 Menit</p>
+
+                                                            <p>
+                                                                <span className="text-[#D0FD00]">
+                                                                    |
+                                                                </span>{" "}
+                                                                Dicek 1-10 Menit
+                                                            </p>
                                                         </div>
 
                                                         <p className="text-xl font-semibold text-[#D0FD00]">
@@ -117,7 +135,12 @@ const DepositTopup = () => {
                                                             <p className="font-bold text-3xl">
                                                                 BNI
                                                             </p>
-                                                            <p><span className="text-[#D0FD00]">|</span> Dicek 1-10 Menit</p>
+                                                            <p>
+                                                                <span className="text-[#D0FD00]">
+                                                                    |
+                                                                </span>{" "}
+                                                                Dicek 1-10 Menit
+                                                            </p>
                                                         </div>
 
                                                         <p className="text-xl font-semibold text-[#D0FD00]">
@@ -137,9 +160,13 @@ const DepositTopup = () => {
                                                             <p className="font-bold text-3xl">
                                                                 BRI
                                                             </p>
-                                                            
-                                                            <p><span className="text-[#D0FD00]">|</span> Dicek 1-10 Menit</p>
 
+                                                            <p>
+                                                                <span className="text-[#D0FD00]">
+                                                                    |
+                                                                </span>{" "}
+                                                                Dicek 1-10 Menit
+                                                            </p>
                                                         </div>
 
                                                         <p className="text-xl font-semibold text-[#D0FD00]">
@@ -152,12 +179,39 @@ const DepositTopup = () => {
                                                     className="self-center"
                                                 />
                                             </button>
-                                            
                                         </div>
 
-                                        <button className="mt-12 w-full h-[48px] text-lg font-bold px-5 rounded-full bg-[#D0FD00] hover:bg-[#1D1F21] text-[#1D1F21] hover:text-[#D0FD00] transition duration-300">
-                                            Top Up Sekarang
-                                        </button>
+                                        <Dialog>
+                                            <DialogTrigger>
+                                                <Button className="mt-12 w-full h-[48px] text-lg font-bold px-5 rounded-full bg-[#D0FD00] hover:bg-[#1D1F21] text-[#1D1F21] hover:text-[#D0FD00] transition duration-300">
+                                                    Top Up Sekarang
+                                                </Button>
+                                            </DialogTrigger>
+                                            <DialogContent className="bg-[#0c0d0d] border-0 min-w-[300px]">
+                                                <DialogHeader>
+                                                    <DialogTitle></DialogTitle>
+                                                    <DialogDescription className="text-white flex flex-col justify-center items-center">
+                                                        <div className="flex flex-col gap-4 items-center">
+                                                            <span className="font-bold text-2xl">Yakin Ingin Top Up?</span>
+                                                            <span className="text-[#D4D4D4]">Apakah Anda yakin ingin melakukan top up Rp <span className="text-[#D0FD00]">100.000</span> saldo?</span>
+                                                        </div>
+                                                        <div className="flex w-full justify-center mt-5">
+                                                            <div className="flex flex-row gap-2">
+                                                                <Button className="bg-[#1D1F21] w-full rounded-3xl font-semibold text-sm sm:text-lg py-6">
+                                                                    Batal
+                                                                </Button>
+                                                                <Button className="bg-[#D0FD00] text-[#0C0D0D] hover:text-[#D0FD00] w-full rounded-3xl font-semibold text-sm sm:text-lg py-6">
+                                                                    Ya, Yakin!
+                                                                </Button>
+                                                            </div>
+                                                        </div>
+                                                        <div className="flex gap-4 text-center mt-4">
+                                                            <span className="text-[#545556]">*Anda tidak akan dapat melakukan top up saldo lagi sebelum transaksi top up ini Berhasil atau Dibatalkan.</span>
+                                                        </div>
+                                                    </DialogDescription>
+                                                </DialogHeader>
+                                            </DialogContent>
+                                        </Dialog>
                                     </div>
                                 </div>
 
