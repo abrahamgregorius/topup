@@ -1,4 +1,3 @@
-import React from "react";
 import timeSquareIcon from "@/assets/Iconly/Curved/Bold/Time Square.svg";
 import personIcon from "@/assets/Iconly/Curved/Bold/Profile.svg";
 import walletIcon from "@/assets/Iconly/Curved/Bold/Wallet.svg";

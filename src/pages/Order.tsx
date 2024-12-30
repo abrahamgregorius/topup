@@ -1,7 +1,6 @@
 import Container from "@/components/partials/Container";
 import Content from "@/components/partials/Content";
 import Main from "@/components/partials/Main";
-import React from "react";
 import diamond from "@/assets/diamond.png";
 import {
     Accordion,
