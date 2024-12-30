@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Navbar from '@/components/partials/navbar/navbar'
 import Footer from './footer'
 
