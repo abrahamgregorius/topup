@@ -2,10 +2,8 @@ import Container from "@/components/partials/Container";
 import Content from "@/components/partials/Content";
 import Main from "@/components/partials/Main";
 import { Button } from "@/components/ui/button";
-import React from "react";
 import gameIcon from "@/assets/Iconly/Curved/Bold/Game.svg";
 import BadgeNew from "@/components/partials/BadgeNew";
-import shield from "@/assets/Iconly/Curved/Bold/Shield Done.svg";
 import mlbb from "@/assets/mlbb.png";
 import {
     Accordion,

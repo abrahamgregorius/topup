@@ -5,10 +5,7 @@ import MenuBar from "@/components/partials/MenuBar";
 import { Button } from "@/components/ui/button";
 import {
     ClockIcon,
-    MessageSquareWarningIcon,
-    UserIcon,
     WalletIcon,
-    XIcon,
 } from "lucide-react";
 import messageIcon from "@/assets/Iconly/Curved/Bold/Message.svg";
 import profileIcon from "@/assets/Iconly/Curved/Bold/Profile.svg";

@@ -1,12 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import Container from "@/components/partials/Container";
 import Main from "@/components/partials/Main";
-import { PersonIcon } from "@radix-ui/react-icons";
 import { SearchIcon } from "lucide-react";
-import React from "react";
-import { Link } from "react-router-dom";
-import MenuBar from "@/components/partials/MenuBar";
 import Content from "@/components/partials/Content";
 import Table from "@/components/partials/table/Table";
 import TableHead from "@/components/partials/table/TableHead";

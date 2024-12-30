@@ -23,17 +23,7 @@ import TableBody from "@/components/partials/table/TableBody";
 import TableHeader from "@/components/partials/table/TableHeader";
 import TableRow from "@/components/partials/table/TableRow";
 import TableData from "@/components/partials/table/TableData";
-import { Badge } from "@/components/ui/badge";
 import BadgeNew from "@/components/partials/BadgeNew";
-import {
-    Pagination,
-    PaginationContent,
-    PaginationEllipsis,
-    PaginationItem,
-    PaginationLink,
-    PaginationNext,
-    PaginationPrevious,
-} from "@/components/ui/pagination";
 import Paginations from "@/components/partials/Paginations";
 
 const MyAccount = () => {

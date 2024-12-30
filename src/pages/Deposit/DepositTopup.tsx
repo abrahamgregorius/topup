@@ -4,7 +4,6 @@ import Main from "@/components/partials/Main";
 import MenuBar from "@/components/partials/MenuBar";
 import { Button } from "@/components/ui/button";
 import { ClockIcon, WalletIcon } from "lucide-react";
-import React from "react";
 import BCALogo from "@/assets/Bank Logo/White/BCA.png";
 import BNILogo from "@/assets/Bank Logo/White/BTN.png";
 import BRILogo from "@/assets/Bank Logo/White/BRI.png";
