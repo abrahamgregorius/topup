@@ -1,7 +1,4 @@
-import Footer from '@/components/ui/Footer'
 import Main from '@/components/partials/Main'
-import Navbar from '@/components/ui/navbar/navbar'
-
 
 const Contact = () => {
     return (

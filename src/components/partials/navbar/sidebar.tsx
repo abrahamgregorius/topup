@@ -1,6 +1,6 @@
 /** @format */
 
-import { HomeIcon, MenuIcon } from "lucide-react";
+import { MenuIcon } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 import { sidebarRoutes } from "@/App";
