@@ -1,6 +1,6 @@
 
 import Navbar from '@/components/partials/navbar/navbar'
-import Footer from './footer'
+import Footer from '@/components/partials/footer'
 
 interface propsType {
     children?: React.ReactNode
