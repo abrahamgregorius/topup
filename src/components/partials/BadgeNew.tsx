@@ -1,5 +1,4 @@
 import { PropsType } from '@/var/var'
-import React from 'react'
 import { Badge } from '../ui/badge'
 
 const BadgeNew = (props: PropsType) => {

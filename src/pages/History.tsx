@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import Container from "@/components/partials/Container";
 import Main from "@/components/partials/Main";
 import { SearchIcon } from "lucide-react";

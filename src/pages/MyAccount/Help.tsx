@@ -1,7 +1,6 @@
 import Container from '@/components/partials/Container'
 import Main from '@/components/partials/Main'
 import MenuBar from '@/components/partials/MenuBar'
-import React from 'react'
 
 const Help = () => {
   return (

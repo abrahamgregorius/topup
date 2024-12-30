@@ -3,7 +3,19 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const VerticalCard = ({ data, isGame = true }) => {
+interface VerticalCardData {
+  background?: string;
+  logo?: string;
+  name?: string;
+  company?: string;
+}
+
+interface VerticalCardProps {
+  data: VerticalCardData; 
+  isGame?: boolean; 
+}
+
+const VerticalCard: React.FC<VerticalCardProps> = ({ data, isGame = true }) => {
   return (
     <div className="group rounded-[24px] h-[240px] w-[190px] overflow-hidden relative">
       {/* Background Image */}

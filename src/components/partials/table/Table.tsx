@@ -1,5 +1,4 @@
 import { PropsType } from '@/var/var'
-import React from 'react'
 
 
 const Table = (props: PropsType) => {

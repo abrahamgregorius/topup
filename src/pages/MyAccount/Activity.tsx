@@ -8,8 +8,7 @@ import TableData from "@/components/partials/table/TableData";
 import TableHead from "@/components/partials/table/TableHead";
 import TableHeader from "@/components/partials/table/TableHeader";
 import TableRow from "@/components/partials/table/TableRow";
-import { Badge, SearchIcon } from "lucide-react";
-import React from "react";
+import { SearchIcon } from "lucide-react";
 
 const Activity = () => {
     return (

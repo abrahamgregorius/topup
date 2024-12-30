@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "@/components/partials/Container";
 import Content from "@/components/partials/Content";
 import Main from "@/components/partials/Main";
