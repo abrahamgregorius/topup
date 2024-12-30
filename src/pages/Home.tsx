@@ -1,5 +1,3 @@
-/** @format */
-
 import Footer from "@/components/partials/Footer";
 import Navbar from "@/components/partials/navbar/navbar";
 import VerticalCard from "@/components/partials/VerticalCard";
